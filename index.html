@@ -15,7 +15,7 @@
     header{display:flex;gap:16px;align-items:center}
     h1{font-size:clamp(20px,3.6vw,32px);margin:0}
     .hero{margin-top:18px;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,0.08)}
-    .hero img{width:100%;height:auto;display:block}
+    .hero video{width:100%;height:auto;display:block;border-radius:12px}
     .card{padding:18px;background:#fff;border-radius:8px;margin-top:18px}
     p.lead{margin:0 0 10px 0;font-weight:600}
     footer{margin-top:22px;font-size:14px;color:#555}
@@ -29,13 +29,15 @@
     <header>
       <div>
         <h1>Thiruparkadal — The Ocean of Milk</h1>
-        <div class="muted">A short, crisp story to pair with your Golu image</div>
+        <div class="muted">A short, crisp story to pair with your Golu animation</div>
       </div>
     </header>
 
-    <div class="hero" role="img" aria-label="Thiruparkadal clay Golu set depicting Vishnu reclining on Adiseshan">
-      <!-- Since image is in root, use filename directly -->
-      <img src="Thiruparkadal.jpg" alt="Clay Golu set showing Lord Vishnu on Adiseshan - Thiruparkadal (Ocean of Milk)">
+    <div class="hero" role="region" aria-label="Thiruparkadal animation video">
+      <video controls autoplay loop muted playsinline>
+        <source src="Thiruparkadal.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
 
     <article class="card" aria-labelledby="story-title">
@@ -46,7 +48,7 @@
     </article>
 
     <footer>
-      <div class="muted">Scan a QR code linked to this page to read and share the story.</div>
+      <div class="muted">Scan the QR code linked to this page to read and share the story.</div>
     </footer>
   </main>
 </body>
